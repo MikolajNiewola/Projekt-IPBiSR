@@ -1,0 +1,93 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "84d9121"
+  },
+  "schemaVersion": 18,
+  "id": "wprowadzenie-danych-osobowych",
+  "components": [
+    {
+      "text": "# Podaj dane osobowe",
+      "type": "text",
+      "layout": {
+        "row": "Row_0sbey0r",
+        "columns": null
+      },
+      "id": "Field_05uf9ep"
+    },
+    {
+      "label": "Imię",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ui9r5u",
+        "columns": null
+      },
+      "id": "Field_0rk2xvd",
+      "key": "textfield_name"
+    },
+    {
+      "label": "Nazwisko",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ui9r5u",
+        "columns": null
+      },
+      "id": "Field_15euz8f",
+      "key": "textfield_surname"
+    },
+    {
+      "label": "Adres Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tjcln0",
+        "columns": null
+      },
+      "id": "Field_0jo2409",
+      "key": "textfield_email"
+    },
+    {
+      "label": "Numer telefonu",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tjcln0",
+        "columns": null
+      },
+      "id": "Field_0fb6dln",
+      "key": "textfield_phone"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Data urodzenia",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1jv46po",
+        "columns": null
+      },
+      "id": "Field_16akr51",
+      "key": "datetime_dob"
+    },
+    {
+      "label": "Płeć",
+      "values": [
+        {
+          "label": "Kobieta",
+          "value": "k"
+        },
+        {
+          "label": "Mężczyzna",
+          "value": "m"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_181l9jk",
+        "columns": null
+      },
+      "id": "Field_13bn07a",
+      "key": "radio_sex"
+    }
+  ],
+  "type": "default"
+}

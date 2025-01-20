@@ -1,0 +1,57 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "84d9121"
+  },
+  "schemaVersion": 18,
+  "id": "Form_wyborKarnetu",
+  "components": [
+    {
+      "text": "# Wybór karnetu",
+      "type": "text",
+      "id": "Field_0cid4hp",
+      "layout": {
+        "row": "Row_05s8knl"
+      }
+    },
+    {
+      "label": "Wybrany karnet",
+      "values": [
+        {
+          "label": "Standard",
+          "value": "Standard"
+        },
+        {
+          "label": "Premium",
+          "value": "Premium"
+        },
+        {
+          "label": "Student",
+          "value": "Student"
+        }
+      ],
+      "type": "select",
+      "id": "Field_1xlr3jl",
+      "key": "membershipType",
+      "defaultValue": "100",
+      "layout": {
+        "row": "Row_1if0dwq"
+      }
+    },
+    {
+      "label": "Zatwierdź",
+      "action": "submit",
+      "type": "button",
+      "method": "POST",
+      "url": "/process/start",
+      "key": "submit_button",
+      "id": "Field_1v5g9qq",
+      "layout": {
+        "row": "Row_0o1z7bd"
+      }
+    }
+  ],
+  "type": "default"
+}
