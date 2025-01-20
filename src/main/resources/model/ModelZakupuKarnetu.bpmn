@@ -37,6 +37,9 @@
     <bpmn:serviceTask id="Activity_0bzjj66" name="Inicjalizacja płatności">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="payment" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=paymentId" target="paymentId" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0f43bbd</bpmn:incoming>
       <bpmn:incoming>Flow_0yjnobo</bpmn:incoming>
@@ -95,7 +98,12 @@
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="enterUserData" retries="3" />
         <zeebe:ioMapping>
-          <zeebe:output source="=userData" target="userData" />
+          <zeebe:output source="=name" target="name" />
+          <zeebe:output source="=surname" target="surname" />
+          <zeebe:output source="=email" target="email" />
+          <zeebe:output source="=phone" target="phone" />
+          <zeebe:output source="=dob" target="dob" />
+          <zeebe:output source="=sex" target="sex" />
         </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0dzkblw</bpmn:incoming>
@@ -147,6 +155,10 @@
           <dc:Bounds x="738" y="262" width="25" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bzjj66_di" bpmnElement="Activity_0bzjj66">
+        <dc:Bounds x="920" y="190" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_01lvrcu_di" bpmnElement="Event_01lvrcu">
         <dc:Bounds x="1932" y="212" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -176,10 +188,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0fqmca7_di" bpmnElement="Activity_13aqbip">
         <dc:Bounds x="1090" y="190" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0bzjj66_di" bpmnElement="Activity_0bzjj66">
-        <dc:Bounds x="920" y="190" width="100" height="80" />
-        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1v11aeo_di" bpmnElement="Event_0p9cl5e">
         <dc:Bounds x="1122" y="252" width="36" height="36" />

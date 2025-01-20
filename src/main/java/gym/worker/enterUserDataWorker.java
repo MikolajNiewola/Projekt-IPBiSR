@@ -10,13 +10,15 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 import java.util.Scanner;
 
-
+@SuppressWarnings("all")
 @Component
 public class enterUserDataWorker {
 
     String[] genders = {"Kobieta","Mężczyzna"};
+
     @JobWorker(type = "enterUserData", name = "enterUserDataWorker")
-    public void enterUserData(final JobClient client, final ActivatedJob job) throws JsonProcessingException {
+//    public void enterUserData(final JobClient client, final ActivatedJob job) throws JsonProcessingException {
+    public Map<String, String> enterUserData(final JobClient client, final ActivatedJob job) throws JsonProcessingException {
 
 
         Scanner scanner = new Scanner(System.in);
@@ -48,12 +50,14 @@ public class enterUserDataWorker {
                 "sex", gender
         );
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        String userDataJson = objectMapper.writeValueAsString(userData);
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        String userDataJson = objectMapper.writeValueAsString(userData);
 
-        client.newCompleteCommand(job.getKey())
-                .variables("{\"userData\": " + userDataJson + "}")
-                .send()
-                .join();
+//        client.newCompleteCommand(job.getKey())
+//                .variables("{\"userData\": " + userDataJson + "}")
+//                .send()
+//                .join();
+
+        return userData;
     }
 }

@@ -11,6 +11,7 @@
         <module name="Czysty" />
         <module name="Gym_Project" />
         <module name="University-Recruitment-2.0" />
+        <module name="Projekt-IPBiSR" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Czysty" options="-parameters" />
       <module name="Gym_Project" options="-parameters" />
+      <module name="Projekt-IPBiSR" options="-parameters" />
       <module name="University-Recruitment-1.0" options="-parameters" />
       <module name="University-Recruitment-2.0" options="-parameters" />
       <module name="recruitment-basic" options="-parameters" />

@@ -13,11 +13,12 @@ public class RegisterPurchaseWorker {
     public void registerPurchase(final JobClient client, final ActivatedJob job) {
 
 
-        client.newCompleteCommand(job.getKey())
-                .variables(job.getVariables())
-                .send()
-                .join();
+//        client.newCompleteCommand(job.getKey())
+//                .variables(job.getVariables())
+//                .send()
+//                .join();
 
+        return;
     }
 }
 

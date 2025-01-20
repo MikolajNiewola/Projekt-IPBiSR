@@ -25,15 +25,15 @@ public class ActivateMembershipWorker {
         System.out.println("Aktywacja karnetu...");
 
         Map<String, Object> variables = job.getVariablesAsMap();
-        Map<String, String> userData = (Map<String, String>) variables.get("userData");
+//        Map<String, String> userData = (Map<String, String>) variables.get("userData");
 
 
-        String name = userData.get("name");
-        String surname = userData.get("surname");
-        String email = userData.get("email");
-        String phone = userData.get("phone");
-        String dob = userData.get("dob");
-        String sex = userData.get("sex");
+        String name = (String) variables.get("name");
+        String surname = (String) variables.get("surname");
+        String email = (String) variables.get("email");
+        String phone = (String) variables.get("phone");
+        String dob = (String) variables.get("dob");
+        String sex = (String) variables.get("sex");
         String typeOfMembership = (String) variables.get("membershipType");
 
 
@@ -74,8 +74,11 @@ public class ActivateMembershipWorker {
             }
         }
 
-        client.newCompleteCommand(job.getKey()).send().join();
+//        client.newCompleteCommand(job.getKey()).send().join();
+
 
         System.out.println("Karnet został aktywowany.");
+
+        return;
     }
 }
